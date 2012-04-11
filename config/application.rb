@@ -11,6 +11,8 @@ end
 
 module Copycopter
   class Application < Rails::Application
+    config.force_ssl = true
+    
     config.action_view.javascript_expansions[:defaults] = %w()
     config.autoload_paths << Rails.root.join('lib').to_s
     config.eager_load_paths += %w(lib)
